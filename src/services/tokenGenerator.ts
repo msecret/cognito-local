@@ -162,6 +162,7 @@ export class JwtTokenGenerator implements TokenGenerator {
       email_verified: Boolean(
         attributeValue("email_verified", user.Attributes) ?? false
       ),
+      preferred_username: attributeValue("preferred_username", user.Attributes),
       event_id: eventId,
       iat: authTime,
       jti: uuid.v4(),

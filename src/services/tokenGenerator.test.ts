@@ -212,6 +212,7 @@ describe("JwtTokenGenerator", () => {
         aud: userPoolClient.ClientId,
         auth_time: expect.any(Number),
         email: attributeValue("email", user.Attributes),
+        preferred_username: "example",
         email_verified: false,
         event_id: expect.stringMatching(UUID),
         exp: Math.floor(originalDate.getTime() / 1000) + ONE_DAY,

@@ -46,6 +46,7 @@ export const user = (partial?: Partial<User>): User => ({
   Attributes: partial?.Attributes ?? [
     { Name: "sub", Value: v4() },
     { Name: "email", Value: `${id("example")}@example.com` },
+    { Name: "preferred_username", Value: "example" },
   ],
   AttributeVerificationCode: partial?.AttributeVerificationCode ?? undefined,
   ConfirmationCode: partial?.ConfirmationCode ?? undefined,
